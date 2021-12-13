@@ -9,5 +9,7 @@
   "theme": "cards",
   "theme-style": "./custom.css",
   "footer": "FirstBit",
+  "thumb-size": 220,
   "usage-stats": false
+ 
 }
