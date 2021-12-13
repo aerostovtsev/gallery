@@ -6,14 +6,15 @@
       <meta name="viewport" content="width=device-width, user-scalable=no" />
       <title>Photo Gallery - Test</title>
       <link rel="stylesheet" href="public/lightgallery/css/lightgallery.css" />
+      <link rel="stylesheet" href="public/lightslider/css/lightslider.min.css" />
       <link rel="stylesheet" href="public/videojs/video-js.min.css" />
       <link rel="stylesheet" href="public/lightgallery/css/lg-exif.min.css" />
       <link rel="stylesheet" href="public/core.css" />
       <link rel="stylesheet" href="public/theme.css" />
+      <link rel="stylesheet" href="public/justifiedgallery/justifiedGallery.min.css" />
   </head>
 
   <body>
-
     
     <div id="container">
     
@@ -31,31 +32,27 @@
     <a class="breadcrumb-item" href="index.html">Home</a>&nbsp;/&nbsp;<a class="breadcrumb-item" href="WallPapers.html">WallPapers</a>&nbsp;/&nbsp;<a class="breadcrumb-item" href="WallPapers-Test.html">Test</a>
       </nav>
     
+    
       <!--
         Nested albums, if any
       -->
-      <div id="albums">
+      <div id="albums" class="justified-gallery">
       </div>
     
       <!--
         All photos and videos
       -->
-      <ul id="media" class="clearfix">
+      <ul id="media" class="clearfix justified-gallery">
           
-            <li data-src="media/large/WallPapers/Test/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202021-12-13%20%D0%B2%2010.51.40.png"
-                data-sub-html=""
-                data-download-url="media/original/WallPapers/Test/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202021-12-13%20%D0%B2%2010.51.40.png"
-                
-                data-filename="Снимок экрана 2021-12-13 в 10.51.40.png"
-          
-              >
-              <a href="media/original/WallPapers/Test/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202021-12-13%20%D0%B2%2010.51.40.png">
-                <img src="media/thumbs/WallPapers/Test/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202021-12-13%20%D0%B2%2010.51.40.png"
-                     width="120"
-                     height="120"
-                     alt="Снимок экрана 2021-12-13 в 10.51.40.png" />
+          <div class="albumList"
+              data-sub-html=""
+              data-download-url="media/original/WallPapers/Test/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202021-12-13%20%D0%B2%2010.51.40.png"data-src="media/large/WallPapers/Test/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202021-12-13%20%D0%B2%2010.51.40.png"data-exthumbimage="media/thumbs/WallPapers/Test/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202021-12-13%20%D0%B2%2010.51.40.png"data-filename="Снимок экрана 2021-12-13 в 10.51.40.png"><a href="media/large/WallPapers/Test/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202021-12-13%20%D0%B2%2010.51.40.png"><img
+                      src="media/small/WallPapers/Test/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202021-12-13%20%D0%B2%2010.51.40.png"
+                      width="597.5103734439834"
+                      height="300"alt="Снимок экрана 2021-12-13 в 10.51.40.png"/>
               </a>
-            </li>  </ul>
+          
+          </div>  </ul>
     
       <!--
         Pagination
@@ -64,7 +61,6 @@
       <!--
         Zip file link
       -->
-    
     
       <!--
         Optional footer
@@ -84,11 +80,13 @@
     <script src="public/videojs/video.min.js"></script>
     <!-- LightGallery -->
     <script src="public/lightgallery/js/lightgallery.js"></script>
+    <script src="public/lightslider/js/lightslider.min.js"></script>
     <script src="public/lightgallery/js/lg-autoplay.js"></script>
     <script src="public/lightgallery/js/lg-pager.js"></script>
     <script src="public/lightgallery/js/lg-thumbnail.js"></script>
     <script src="public/lightgallery/js/lg-video.js"></script>
     <script src="public/lightgallery/js/lg-exif.min.js"></script>
+    <script src="public/justifiedgallery/jquery.justifiedGallery.min.js"></script>
 
     <script>
       $(document).ready(function() {
@@ -98,10 +96,28 @@
           loop : false,
           download: true,
           counter: true,
-          videojs: true
+          videojs: true,
+          exThumbImage: 'data-exthumbimage',
+        });
+
+        // Init justified gallery for albums
+        $("#albums").justifiedGallery({
+          margins: 10,
+          rowHeight: 300,
+          maxRowHeight: 325,
+        });
+
+        // Init justified gallery for photos
+        $("#media").justifiedGallery({
+          selector: '.albumList',
+          waitThumbnailsLoad: false,
+          margins: 10,
+          rowHeight: 250,
+          maxRowHeight: 275,
         });
       });
     </script>
+
 
 
   </body>
