@@ -6,7 +6,7 @@
   "sort-media-by": "filename",
   "download-photos": "copy",
   "cleanup": true,
-  "theme": "card",
+  "theme": "cards",
   "theme-style": "./custom.css",
   "footer": "FirstBit",
   "usage-stats": false
