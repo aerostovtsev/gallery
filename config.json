@@ -1,14 +1,14 @@
 {
   "input": "./gallery",
   "output": "./build_output",
-  "title": "Фото галерея",
+  "title": "FirstBit. Красноярск ЦО",
   "sort-albums-by": "title",
   "sort-media-by": "filename",
   "download-photos": "copy",
   "cleanup": true,
   "theme": "cards",
   "theme-style": "./custom.css",
-  "footer": "FirstBit",
+  "footer": "С любовью для teams FirstBit",
   "thumb-size": 330,
   "embed-exif": true, 
   "usage-stats": false
