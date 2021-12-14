@@ -9,7 +9,7 @@
   "theme": "cards",
   "theme-style": "./custom.css",
   "footer": "FirstBit",
-  "thumb-size": 400,
+  "thumb-size": 360,
   "embed-exif": true, 
   "usage-stats": false
  
