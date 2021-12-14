@@ -10,6 +10,7 @@
   "theme-style": "./custom.css",
   "footer": "FirstBit",
   "thumb-size": 400,
+  "embed-exif": true, 
   "usage-stats": false
  
 }
