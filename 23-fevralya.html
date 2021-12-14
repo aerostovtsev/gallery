@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, user-scalable=no" />
+      <title>Фото галерея - 23 февраля</title>
+      <link rel="stylesheet" href="public/lightgallery/css/lightgallery.css" />
+      <link rel="stylesheet" href="public/videojs/video-js.min.css" />
+      <link rel="stylesheet" href="public/lightgallery/css/lg-exif.min.css" />
+      <link rel="stylesheet" href="public/core.css" />
+      <link rel="stylesheet" href="public/theme.css" />
+  </head>
+
+  <body>
+
+    
+    <div id="container">
+    
+      <!--
+        Gallery title
+      -->
+      <header>
+        <h1><a href="index.html">Фото галерея</a></h1>
+      </header>
+    
+      <!--
+        Breadcrumbs of parent albums
+      -->
+      <nav class="breadcrumbs">
+    <a class="breadcrumb-item" href="index.html">Home</a>&nbsp;/&nbsp;<a class="breadcrumb-item" href="23-fevralya.html">23 февраля</a>
+      </nav>
+    
+      <!--
+        Nested albums, if any
+      -->
+      <div id="albums">
+    <a href="23-fevralya-2018-23-fevralya.html" style="background-image: url('media/small/23%20%D1%84%D0%B5%D0%B2%D1%80%D0%B0%D0%BB%D1%8F/2018.%2023%20%D1%84%D0%B5%D0%B2%D1%80%D0%B0%D0%BB%D1%8F/IMG_7927.JPG')">
+            <div class="info">
+              <h3>2018. 23 февраля</h3>
+              <div class="summary">16 photos</div>
+              <div class="date">01 Dec 2016 - 01 Dec 2016</div>
+            </div>
+          </a><a href="23-fevralya-2019-23-fevralya.html" style="background-image: url('media/small/23%20%D1%84%D0%B5%D0%B2%D1%80%D0%B0%D0%BB%D1%8F/2019.%2023%20%D1%84%D0%B5%D0%B2%D1%80%D0%B0%D0%BB%D1%8F/20190222_084209.jpg')">
+            <div class="info">
+              <h3>2019. 23 февраля</h3>
+              <div class="summary">8 photos</div>
+              <div class="date">22 Feb 2019 - 22 Feb 2019</div>
+            </div>
+          </a><a href="23-fevralya-2020-23-fevralya.html" style="background-image: url('media/small/23%20%D1%84%D0%B5%D0%B2%D1%80%D0%B0%D0%BB%D1%8F/2020.%2023%20%D1%84%D0%B5%D0%B2%D1%80%D0%B0%D0%BB%D1%8F/IMG_9384.JPG')">
+            <div class="info">
+              <h3>2020. 23 февраля</h3>
+              <div class="summary">23 photos</div>
+              <div class="date">21 Feb 2020 - 21 Feb 2020</div>
+            </div>
+          </a>  </div>
+    
+      <!--
+        All photos and videos
+      -->
+      <ul id="media" class="clearfix">
+      </ul>
+    
+      <!--
+        Pagination
+      -->
+    
+      <!--
+        Zip file link
+      -->
+    
+    
+      <!--
+        Optional footer
+      -->
+      <footer>
+        <p>FirstBit</p>
+      </footer>
+    
+    </div>
+    <!-- Video loader -->
+    <div id="videos">
+    </div>
+
+    <!-- jQuery -->
+    <script src="public/jquery.min.js"></script>
+    <!-- VideoJS -->
+    <script src="public/videojs/video.min.js"></script>
+    <!-- LightGallery -->
+    <script src="public/lightgallery/js/lightgallery.js"></script>
+    <script src="public/lightgallery/js/lg-autoplay.js"></script>
+    <script src="public/lightgallery/js/lg-pager.js"></script>
+    <script src="public/lightgallery/js/lg-thumbnail.js"></script>
+    <script src="public/lightgallery/js/lg-video.js"></script>
+    <script src="public/lightgallery/js/lg-exif.min.js"></script>
+
+    <script>
+      $(document).ready(function() {
+        $("#media").lightGallery({
+          thumbWidth: 80,
+          controls: true,
+          loop : false,
+          download: true,
+          counter: true,
+          videojs: true
+        });
+      });
+    </script>
+
+
+  </body>
+
+</html>
